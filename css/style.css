@@ -637,12 +637,15 @@ footer .credit a {
     display: inline-block;
   }
 
+  .navbar {
+    display: flex;
+  }
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
-    width: 30rem;
+    width: 100%;
     height: 100vh;
     transition: 0.3s;
   }
@@ -665,12 +668,14 @@ footer .credit a {
 
   .navbar .search-form {
     width: 90%;
-    right: 2rem;
+    right: 1rem;
   }
 
   .hero .content {
+    display: flex;
     flex-wrap: wrap;
     text-align: justify;
+    justify-content: space-between;
   }
 
   .about .row {
@@ -696,6 +701,10 @@ footer .credit a {
   }
   .about .experience .row {
     flex-wrap: wrap;
+  }
+
+  .test {
+    display: flex;
   }
   .test .row {
     flex-wrap: wrap;
@@ -735,31 +744,20 @@ footer .credit a {
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   html {
     font-size: 55%;
   }
 
-  .hero .content {
-    flex-wrap: wrap;
-    text-align: justify;
+  .navbar {
+    display: flex;
   }
-  .test .row {
-    flex-wrap: wrap;
-  }
-  .test .content {
-    flex-wrap: wrap;
-  }
-  #hamburger-menu {
-    display: inline-block;
-  }
-
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
-    width: 30rem;
+    width: 100%;
     height: 100vh;
     transition: 0.3s;
   }
@@ -782,12 +780,14 @@ footer .credit a {
 
   .navbar .search-form {
     width: 90%;
-    right: 2rem;
+    right: 1rem;
   }
 
   .hero .content {
+    display: flex;
     flex-wrap: wrap;
     text-align: justify;
+    justify-content: space-between;
   }
 
   .about .row {
@@ -813,6 +813,10 @@ footer .credit a {
   }
   .about .experience .row {
     flex-wrap: wrap;
+  }
+
+  .test {
+    display: flex;
   }
   .test .row {
     flex-wrap: wrap;
@@ -842,9 +846,10 @@ footer .credit a {
     flex-wrap: wrap;
   }
   .modal .modal-container .modal-content img {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
   }
+
   .experience .row1 {
     flex-wrap: wrap;
   }
