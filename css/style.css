@@ -306,12 +306,12 @@ body {
 }
 
 .test .row .about-img img {
-  width: 40rem;
+  width: 30rem;
   height: 30rem;
 }
 
 .test .row .content {
-  flex: 1 1 35rem;
+  flex: auto;
   padding: 0 1rem;
 }
 
@@ -669,7 +669,8 @@ footer .credit a {
   }
 
   .hero .content {
-    grid-template-columns: auto;
+    flex-wrap: wrap;
+    text-align: justify;
   }
 
   .about .row {
@@ -701,6 +702,7 @@ footer .credit a {
   }
   .test .content {
     flex-wrap: wrap;
+    text-align: justify;
   }
   .menu p {
     font-size: 1.3rem;
@@ -733,15 +735,117 @@ footer .credit a {
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 767px) {
   html {
     font-size: 55%;
   }
 
+  .hero .content {
+    flex-wrap: wrap;
+    text-align: justify;
+  }
   .test .row {
     flex-wrap: wrap;
   }
   .test .content {
+    flex-wrap: wrap;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .hero .content {
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.5rem;
+  }
+  .about .experience .row {
+    flex-wrap: wrap;
+  }
+  .test .row {
+    flex-wrap: wrap;
+  }
+  .test .content {
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+  .menu p {
+    font-size: 1.3rem;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map {
+    height: 40rem;
+  }
+  .contact .row form {
+    padding-top: 0;
+  }
+  .modal .modal-container {
+    position: relative;
+    height: 70%;
+    width: 70%;
+  }
+  .modal-content {
+    flex-wrap: wrap;
+  }
+  .modal .modal-container .modal-content img {
+    width: 70%;
+    height: 70%;
+  }
+  .experience .row1 {
     flex-wrap: wrap;
   }
 }
